@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/hint_register"
+        style="@style/TextView.Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Registro:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_register"
+        style="@style/TextView.Header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="01804512"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hint_register"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hint_payment"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Pago:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_register" />
+
+    <TextView
+        android:id="@+id/text_payment"
+        style="@style/TextView.Normal"
+        android:layout_width="338dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="$585.56"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/gd_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hint_payment"
+        app:layout_constraintTop_toBottomOf="@id/hint_register" />
+
+    <TextView
+        android:id="@+id/hint_type"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Tipo:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_payment" />
+
+    <TextView
+        android:id="@+id/text_type"
+        style="@style/TextView.Normal"
+        android:layout_width="344dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Z"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/gd_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hint_type"
+        app:layout_constraintTop_toBottomOf="@id/hint_payment" />
+
+    <TextView
+        android:id="@+id/hint_real_payment"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="109dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Pago pactado:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hint_type" />
+
+    <TextView
+        android:id="@+id/text_real_payment"
+        style="@style/TextView.Normal"
+        android:layout_width="271dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="$568"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/gd_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hint_real_payment"
+        app:layout_constraintTop_toBottomOf="@id/hint_type" />
+
+    <TextView
+        android:id="@+id/hint_aport"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Solid.:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_real_payment" />
+
+    <TextView
+        android:id="@+id/text_aport"
+        style="@style/TextView.Normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="$55,568"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/gd_middle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/hint_aport"
+        app:layout_constraintTop_toBottomOf="@+id/hint_real_payment" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gd_middle"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <TextView
+        android:id="@+id/hint_refund"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="89dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Devolución:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_refund2" />
+
+    <TextView
+        android:id="@+id/hint_refund2"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="89dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Pago total:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_aport" />
+
+    <TextView
+        android:id="@+id/hint_saving"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="74dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Apartado:"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/hint_refund"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp" />
+
+    <TextView
+        android:id="@+id/text_saving"
+        style="@style/TextView.Normal"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="23dp"
+        android:editable="false"
+        android:text="$55,568"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toEndOf="@+id/hint_saving"
+        app:layout_constraintTop_toBottomOf="@id/hint_refund" />
+
+    <TextView
+        android:id="@+id/text_refund"
+        style="@style/TextView.Normal"
+        android:layout_width="286dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="$55,568"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hint_refund"
+        app:layout_constraintTop_toBottomOf="@+id/hint_refund2" />
+
+    <TextView
+        android:id="@+id/text_pago_pactado"
+        style="@style/TextView.Normal"
+        android:layout_width="282dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="$55,568"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/hint_refund2"
+        app:layout_constraintTop_toTopOf="@+id/text_aport" />
+
+    <TextView
+        android:id="@+id/hint_fee"
+        style="@style/TextView.Normal.Bold"
+        android:layout_width="44dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Multa:"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/hint_saving"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/text_fee"
+        style="@style/TextView.Normal"
+        android:layout_width="326dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:editable="false"
+        android:text="$55,568"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/hint_fee"
+        app:layout_constraintTop_toBottomOf="@+id/hint_saving" />
+
+    <TextView
+        android:id="@+id/txt_sequence_resume"
+        style="@style/TextView.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:text="Registro: %s Pago: %s\n Tipo: %s\nPago real: %s Aportación: %s Devolución: %s Ahorro: %s Multa: %s" />
+
+</android.support.constraint.ConstraintLayout>

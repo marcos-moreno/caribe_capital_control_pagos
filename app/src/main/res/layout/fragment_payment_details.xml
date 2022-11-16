@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:context=".ui.PaymentDetailsFragment">
+
+        <View
+            android:id="@+id/vw_fakeview"
+            android:layout_width="412dp"
+            android:layout_height="158dp"
+            android:background="@drawable/background_gradient"
+            android:text="@string/hello_blank_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hint_code"
+            style="@style/TextView.Normal.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Codigo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_code"
+            style="@style/TextView.Normal.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:text="VEANME"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hint_code"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hint_name"
+            style="@style/TextView.Normal.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Nombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_code" />
+
+
+        <TextView
+            style="@style/TextView.Normal.White"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="VEANMEdddddddddddddddddddddddddd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_code"
+            android:id="@+id/txt_name"
+           />
+
+        <TextView
+            android:id="@+id/hint_role"
+            style="@style/TextView.Normal.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Puesto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_role"
+            style="@style/TextView.Normal.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:text="VEANME"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hint_role"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_theorical_payment"
+            android:textColorHint="@color/colorOrange1"
+            app:hintTextAppearance="@style/HintAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vw_fakeview" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_theorical_payment"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:focusable="false"
+                android:hint="@string/text_theoric_payment"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_difference"
+            android:textColorHint="@color/colorOrange1"
+            app:hintTextAppearance="@style/HintAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_theorical_payment" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_difference"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:focusable="false"
+                android:hint="@string/text_difference"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_real_payment"
+            android:textColorHint="@color/colorOrange1"
+            app:hintTextAppearance="@style/HintAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_difference" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_real_payment"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:hint="@string/text_real_payment"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_return"
+            android:textColorHint="@color/colorOrange1"
+            app:hintTextAppearance="@style/HintAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_real_payment" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_return"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:hint="@string/text_return"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_input"
+            android:textColorHint="@color/colorOrange1"
+            app:hintTextAppearance="@style/HintAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_return" >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_contribution"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:hint="@string/text_input"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_penalty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColorHint="@color/colorOrange1"
+            android:visibility="invisible"
+            app:hintTextAppearance="@style/HintAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_save_payment">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_fee"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:text="0"
+                android:hint="@string/text_penalty"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_saving"
+            android:layout_width="406dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColorHint="@color/colorOrange1"
+            android:visibility="invisible"
+            app:hintTextAppearance="@style/HintAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_penalty">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tiet_saving"
+                style="@style/StyledTilEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:backgroundTint="@color/colorOrange1"
+                android:drawableLeft="@drawable/ic_money"
+                android:hint="@string/text_saving"
+                android:text="0"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorOrange1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/til_assistance"
+            style="@style/TextView.Normal.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Asistencia"
+            android:textAppearance="@style/HintAppearance"
+            android:textColor="@color/colorOrange1"
+            android:textColorHint="@color/colorOrange1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_input">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinner_assistance"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/til_assistance"
+            android:textColor="#A6A6A6"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_save_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background_rounded"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Guardar"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_assistance" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView >

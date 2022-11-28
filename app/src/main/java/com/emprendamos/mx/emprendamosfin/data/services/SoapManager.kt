@@ -23,11 +23,11 @@ class SoapManager(val context : Context) {
     companion object {
         val TAG = this::class.java.simpleName
         const val NS_EMPRENDAMOS_WS = "http://tempuri.org/"
-        const val NS_EMPRENDAMOS_GPS = "http://www.emprendamosfin.com/microfinancieras/posicionador/"
+        const val NS_EMPRENDAMOS_GPS = "http://201.149.62.118/Posicionador/Posicionador.asmx"
         const val PROPERTY_USER = "usuario"
-        const val URL_WS_ENDPOINT = "http://201.149.62.120/ws_servicios_d/service.asmx"
-        const val URL_LOGIN_ENDPOINT = "http://201.149.62.120/administracion/seguridad_rep/Process_Service/ES_Process_Service.asmx"
-        const val URL_GPS_ENDPOINT = "http://sicem.emprendamosfin.com:1103/Posicionador/Posicionador.asmx"
+        const val URL_WS_ENDPOINT = "http://201.149.62.118/ws_servicios_carcap/Service.asmx"
+        const val URL_LOGIN_ENDPOINT = "http://201.149.62.118/administracion/seguridad_carcap/Process_Service/Process_Service.asmx"
+        const val URL_GPS_ENDPOINT = "http://201.149.62.118/Posicionador/Posicionador.asmx"
         const val TIMEOUT = 60000
     }
 

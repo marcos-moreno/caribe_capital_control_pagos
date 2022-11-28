@@ -1,10 +1,14 @@
 package com.emprendamos.mx.emprendamosfin.mvp.payregister
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import com.emprendamos.mx.emprendamosfin.R
 import com.emprendamos.mx.emprendamosfin.data.database.repository.entities.Client
@@ -52,9 +56,9 @@ class PayRegisterView(act: FragmentActivity) {
 
         val types = arrayOf(Types.NOT_ASIGNED, Types.S, Types.P)
         val adapter = ArrayAdapter(
-                activity!!,
-                R.layout.item_spinner,
-                types
+            activity!!,
+            R.layout.item_spinner,
+            types
         )
 
         activity.recyclerview.layoutManager = LinearLayoutManager(activity)
@@ -64,6 +68,22 @@ class PayRegisterView(act: FragmentActivity) {
 
         activity.back_layout.visibility = View.GONE
 
+
+        activity.btn_show_description.setOnClickListener {
+            var dialogBuilder = AlertDialog.Builder(activity)
+            val dialogView = LayoutInflater.from(activity).inflate(R.layout.fragment_description, null)
+
+            val dialog = dialogBuilder.create()
+            dialogView.findViewById<EditText>(R.id.txtDescriptionViewI).apply {
+                setText(activity.txtobservations.text.toString())
+            }
+            dialogView.findViewById<Button>(R.id.btnAceptar).setOnClickListener {
+                activity.txtobservations.setText(dialogView.findViewById<EditText>(R.id.txtDescriptionViewI).text.toString())
+                dialog.dismiss()
+            }
+            dialog.setView(dialogView)
+            dialog.show()
+        }
 
     }
 

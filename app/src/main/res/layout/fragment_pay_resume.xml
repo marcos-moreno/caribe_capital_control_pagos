@@ -8,8 +8,8 @@
 
     <ScrollView
         android:id="@+id/vw_fakeview"
-        android:layout_width="386dp"
-        android:layout_height="729dp"
+        android:layout_width="387dp"
+        android:layout_height="857dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,37 +18,36 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/vw_fakeview2"
             android:layout_width="390dp"
-            android:layout_height="match_parent"
+            android:layout_height="857dp"
             tools:context=".ui.PaymentDetailsFragment">
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/vw_fakeview3"
                 android:layout_width="386dp"
-                android:layout_height="278dp"
+                android:layout_height="wrap_content"
                 android:background="@color/colorLightGray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-
                 <TextView
                     android:id="@+id/hint_code"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="105dp"
-                    android:layout_height="27dp"
+                    android:layout_width="89dp"
+                    android:layout_height="26dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Código"
+                    android:text="Código:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/txtgroup"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="258dp"
-                    android:layout_height="30dp"
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="00000"
+                    android:text="000000000000000000000000000000000000000000000000000000000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/hint_name"
                     app:layout_constraintTop_toBottomOf="@+id/txtcode" />
@@ -56,7 +55,7 @@
                 <TextView
                     android:id="@+id/txtcode"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="262dp"
+                    android:layout_width="265dp"
                     android:layout_height="23dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
@@ -68,21 +67,21 @@
                 <TextView
                     android:id="@+id/txtcicle"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="254dp"
+                    android:layout_width="260dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="12dp"
                     android:text="1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.701"
+                    app:layout_constraintHorizontal_bias="0.714"
                     app:layout_constraintStart_toEndOf="@+id/hint_role"
                     app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
 
                 <TextView
                     android:id="@+id/txttype"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="206dp"
-                    android:layout_height="24dp"
+                    android:layout_width="207dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:text="P"
@@ -95,36 +94,36 @@
                 <TextView
                     android:id="@+id/txtdate"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="258dp"
+                    android:layout_width="261dp"
                     android:layout_height="25dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:text="01/01/2019"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.666"
+                    app:layout_constraintHorizontal_bias="0.608"
                     app:layout_constraintStart_toEndOf="@+id/hint_fecha"
                     app:layout_constraintTop_toBottomOf="@+id/txtcicle" />
 
                 <TextView
                     android:id="@+id/hint_name"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="102dp"
-                    android:layout_height="26dp"
+                    android:layout_width="88dp"
+                    android:layout_height="25dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Grupo"
+                    android:text="Grupo:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtcode" />
 
                 <TextView
                     android:id="@+id/hint_role"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="99dp"
-                    android:layout_height="25dp"
+                    android:layout_width="74dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Ciclo"
+                    android:text="Ciclo:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
 
@@ -132,60 +131,62 @@
                 <TextView
                     android:id="@+id/hint_fecha"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="103dp"
-                    android:layout_height="24dp"
+                    android:layout_width="77dp"
+                    android:layout_height="26dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Fecha"
+                    android:text="Fecha:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hint_role" />
 
                 <TextView
                     android:id="@+id/hint_registro"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="151dp"
-                    android:layout_height="27dp"
+                    android:layout_width="150dp"
+                    android:layout_height="26dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Tipo registro"
+                    android:text="Tipo registro:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hint_fecha" />
 
                 <TextView
                     android:id="@+id/hint_observations"
                     style="@style/TextView.Normal.White"
-                    android:layout_width="365dp"
-                    android:layout_height="24dp"
+                    android:layout_width="167dp"
+                    android:layout_height="29dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
-                    android:text="Observaciones"
+                    android:text="Observaciones:"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hint_registro" />
+
 
                 <EditText
                     android:id="@+id/txtobservations"
                     style="@style/TextView.Normal.White"
                     android:layout_width="363dp"
-                    android:layout_height="54dp"
+                    android:layout_height="5dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="19dp"
                     android:backgroundTint="@color/colorWhite"
-                    android:ems="1"
-                    android:inputType="textMultiLine"
-                    android:text="dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+                    android:enabled="false"
+                    android:inputType="text"
                     android:textColor="@color/colorWhite"
-                    android:textColorHint="@color/colorWhite"
-                    android:textColorLink="@color/colorWhite"
-                    android:textCursorDrawable="@color/colorWhite"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    android:visibility="invisible"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/hint_observations"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toBottomOf="@+id/hint_observations" />
 
+                <ImageButton
+                    android:id="@+id/btn_show_description_res"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ojo"
+                    app:layout_constraintStart_toEndOf="@+id/hint_observations"
+                    app:layout_constraintTop_toBottomOf="@+id/txttype"></ImageButton>
 
             </android.support.constraint.ConstraintLayout>
 

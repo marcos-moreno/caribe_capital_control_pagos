@@ -5,11 +5,10 @@
     android:fontFamily="@font/montserrat_bold"
     android:textSize="20sp"
     android:layout_width="match_parent"
-    android:gravity="right"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
     android:singleLine="true"
-    android:textAlignment="inherit"
+    android:textAlignment="center"
     android:textColor="@color/colorWhite"
     tools:text="HOLA"
     tools:textColor="@color/colorOrange1" />

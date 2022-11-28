@@ -116,7 +116,6 @@
                 android:tag="sensitive"
                 android:imeOptions="actionGo"
                 android:inputType="textPassword"
-                android:maxLength="10"
                 android:padding="16dp"
                 android:textSize="13.9sp"
                 android:drawableLeft="@drawable/ic_lock"

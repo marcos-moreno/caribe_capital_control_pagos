@@ -1,12 +1,15 @@
 package com.emprendamos.mx.emprendamosfin.mvp.payedit
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.app.Dialog
 import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Toast
+import android.view.Window
+import android.widget.*
 import com.emprendamos.mx.emprendamosfin.R
 import com.emprendamos.mx.emprendamosfin.data.database.repository.entities.Client
 import com.emprendamos.mx.emprendamosfin.data.database.repository.entities.SequencePayControlClient
@@ -19,7 +22,16 @@ import com.emprendamos.mx.emprendamosfin.ui.PaymentDetailsFragment
 import com.emprendamos.mx.emprendamosfin.ui.adapters.ClientsByGroupListAdapter
 import com.emprendamos.mx.emprendamosfin.ui.interfaces.OnActionsListener
 import com.emprendamos.mx.emprendamosfin.ui.interfaces.OnSelectedItemInterface
-import kotlinx.android.synthetic.main.fragment_pay_register.*
+import kotlinx.android.synthetic.main.fragment_pay_register.btn_show_description
+import kotlinx.android.synthetic.main.fragment_pay_register.txtcode
+import kotlinx.android.synthetic.main.fragment_pay_register.txtgroup
+import kotlinx.android.synthetic.main.fragment_pay_register.txtcicle
+import kotlinx.android.synthetic.main.fragment_pay_register.txtdate
+import kotlinx.android.synthetic.main.fragment_pay_register.spinner_type
+import kotlinx.android.synthetic.main.fragment_pay_register.txtobservations
+import kotlinx.android.synthetic.main.fragment_pay_register.back_layout
+import kotlinx.android.synthetic.main.fragment_pay_register.recyclerview
+import kotlinx.android.synthetic.main.fragment_description.txtDescriptionViewI
 import java.lang.ref.WeakReference
 import java.util.Calendar
 
@@ -73,7 +85,26 @@ class PayEditView(act: FragmentActivity) {
             recyclerview.layoutManager = LinearLayoutManager(activity)
 
         }
+        activity.btn_show_description.setOnClickListener {
+            var dialogBuilder = AlertDialog.Builder(activity)
+            val dialogView = LayoutInflater.from(activity).inflate(R.layout.fragment_description, null)
+
+            val dialog = dialogBuilder.create()
+            dialogView.findViewById<EditText>(R.id.txtDescriptionViewI).apply {
+                setText(activity.txtobservations.text.toString())
+            }
+            dialogView.findViewById<Button>(R.id.btnAceptar).setOnClickListener {
+                activity.txtobservations.setText(dialogView.findViewById<EditText>(R.id.txtDescriptionViewI).text.toString())
+                dialog.dismiss()
+            }
+            dialog.setView(dialogView)
+            dialog.show()
+        }
+
     }
+
+
+
 
     fun showClientList(sequencesClient: ArrayList<SequencePayControlClient>, listener: OnSelectedItemInterface) {
         activity.recyclerview.adapter = ClientsByGroupListAdapter(sequencesClient, listener)

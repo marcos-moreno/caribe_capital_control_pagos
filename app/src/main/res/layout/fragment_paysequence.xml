@@ -1,221 +1,249 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.PayRegisterFragment">
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="419dp"
-        android:layout_height="287dp"
-        android:background="@drawable/background_gradient"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="284dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="2dp">
+        tools:layout_editor_absoluteX="-2dp">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/vw_fakeview2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".ui.PaymentDetailsFragment">
 
-            <TextView
-                android:id="@+id/hint_code"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Código"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtgroup"
-                style="@style/TextView.Normal.White"
-                android:layout_width="310dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="VEANM"
-                android:textAlignment="textEnd"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtcode" />
-
-            <TextView
-                android:id="@+id/txtcode"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="VEANME"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtcicle"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="VEANME"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
-
-            <TextView
-                android:id="@+id/txtdate"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="VEANME"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtcicle" />
-
-            <TextView
-                android:id="@+id/hint_name"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Grupo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hint_code" />
-
-            <TextView
-                android:id="@+id/hint_role"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Ciclo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
-
-            <TextView
-                android:id="@+id/hint_fecha"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Fecha"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hint_role" />
-
-            <TextView
-                android:id="@+id/hint_registro"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Tipo registro"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hint_fecha" />
-
-            <TextView
-                android:id="@+id/hint_observations"
-                style="@style/TextView.Normal.White"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Observaciones"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hint_registro" />
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/hint_registro"
-                app:layout_constraintTop_toTopOf="@+id/hint_registro">
-
-                <Spinner
-                    android:id="@+id/spinner_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="@color/colorWhite"
-                    android:spinnerMode="dropdown"
-                    tools:listitem="@layout/item_spinner" />
-
-            </RelativeLayout>
-
-
-            <EditText
-                android:id="@+id/txtobservations"
-                style="@style/TextView.Normal.White"
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/vw_fakeview3"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:backgroundTint="@color/colorWhite"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                android:textColorLink="@color/colorWhite"
-                android:textCursorDrawable="@color/colorWhite"
-                app:layout_constraintBottom_toBottomOf="@+id/view"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGray"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hint_observations" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/hint_code"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Código:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/txtgroup"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="314dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="VEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANMVEANM"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.661"
+                    app:layout_constraintStart_toEndOf="@+id/hint_name"
+                    app:layout_constraintTop_toBottomOf="@+id/txtcode" />
+
+                <TextView
+                    android:id="@+id/txtcode"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="313dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="00000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toEndOf="@+id/hint_code"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtcicle"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="297dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="VEANME"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.87"
+                    app:layout_constraintStart_toEndOf="@+id/hint_role"
+                    app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
+
+                <TextView
+                    android:id="@+id/txtdate"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="292dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="VEANME"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toEndOf="@+id/hint_fecha"
+                    app:layout_constraintTop_toBottomOf="@+id/txtcicle" />
+
+                <TextView
+                    android:id="@+id/hint_name"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Grupo:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hint_code" />
+
+                <TextView
+                    android:id="@+id/hint_role"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="59dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Ciclo:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtgroup" />
+
+                <TextView
+                    android:id="@+id/hint_fecha"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Fecha:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hint_role" />
+
+
+                <TextView
+                    android:id="@+id/hint_registro"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Tipo registro:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hint_fecha" />
+
+                <TextView
+                    android:id="@+id/hint_observations"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Observaciones:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hint_registro" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.285"
+                    app:layout_constraintStart_toEndOf="@+id/hint_registro"
+                    app:layout_constraintTop_toTopOf="@+id/hint_registro">
+
+                    <Spinner
+                        android:id="@+id/spinner_type"
+                        android:layout_width="247dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/colorWhite"
+                        android:spinnerMode="dropdown"
+                        tools:listitem="@layout/item_spinner" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/txtobservations"
+                    style="@style/TextView.Normal.White"
+                    android:layout_width="375dp"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="19dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hint_observations" />
+
+                <ImageButton
+                    android:id="@+id/btn_show_description_seq"
+                    android:layout_width="43dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ojo"
+                    app:layout_constraintStart_toEndOf="@+id/hint_observations"
+                    app:layout_constraintTop_toBottomOf="@+id/relativeLayout"></ImageButton>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/content_recicler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/vw_fakeview3"
+                tools:layout_editor_absoluteX="-4dp">
+
+
+                <LinearLayout
+                    android:id="@+id/back_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="80dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Información de registro" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="413dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/back_layout"
+                    app:layout_constraintVertical_bias="0.0">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </android.support.constraint.ConstraintLayout>
+
+
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
-    <LinearLayout
-        android:id="@+id/back_layout"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <ImageView
-            android:id="@+id/back_arrow"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Información de registro" />
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_layout">
-
-    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>

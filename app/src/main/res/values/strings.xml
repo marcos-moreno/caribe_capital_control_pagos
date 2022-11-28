@@ -47,4 +47,5 @@
     <string name="hint_config_saved">Configuración guardada</string>
     <string name="title_activity_sequence">SequenceActivity</string>
     <string name="title_activity_sequence_edit">SequenceEditActivity</string>
+    <string name="descripctionTitle">Descripción</string>
 </resources>

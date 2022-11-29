@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
+    android:layout_height="wrap_content"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -11,11 +11,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="23dp">
+    </View>
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@mipmap/ic_launch" />
+        android:layout_width="73dp"
+        android:layout_height="49dp"
+        android:background="@drawable/border_radius"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/carcaplogo" />
 
     <TextView
         android:id="@+id/text_full_name"
